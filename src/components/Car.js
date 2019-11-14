@@ -1,59 +1,27 @@
 import React from 'react'
 import cars from '../cars.json'
-// import material ui components here //
-// Container, Paper, Chip //
+import { Container, Paper, Chip, Typography } from '@material-ui/core';
 
-// const CheckCar = (props) => {
-//   if (props.params.id) {
-//     return (
-//       console.log("testing")
-//     )
-//   }
-// }
 
 const Car = (props) => {
-  if (props.match.params.id) {
-    return (
-      <div className="car-container" key={props.match.params.id}>
-        {/* {console.log(props.match.params.id)} */}
-        {cars.map((car, index) => (
-          <h3>hello</h3>
-        ))}
-
-      </div>
-    )
-  }
-
+  let id = props.match.params.id;
+  let thisCar = cars.find(car => id == car.id)
+  return (
+    <div className="car-container" key={props.match.params.id}>
+      {console.log(id)}
+      <Paper>
+        <Typography variant='h4'>{`Name: ${thisCar.Name}`}</Typography>
+        <Chip label={`Miles per gallon: ${thisCar.Miles_per_Gallon}`}></Chip>
+        <Chip label={`Cylinders: ${thisCar.Cylinders}`}></Chip>
+        <Chip label={`Displacement: ${thisCar.Displacement}`}></Chip>
+        <Chip label={`Horsepower: ${thisCar.Horsepower}`}></Chip>
+        <Chip label={`Weight (lbs): ${thisCar.Weight_in_lbs}`}></Chip>
+        <Chip label={`Acceleration: ${thisCar.Acceleration}`}></Chip>
+        <Chip label={`Year: ${thisCar.Year}`}></Chip>
+        <Chip label={`Country of Origin: ${thisCar.Origin}`}></Chip>
+      </Paper>
+    </div>
+  )
 }
 
 export default Car;
-
-// {cars.map((car, idx) => (
-//   <Card key={idx} className="card">
-//     <CardContent className="text-gray">
-//       <span>{car.Name.toUpperCase()}</span>
-//         <ul>
-//           <li>Miles_per_Gallon: {car["Miles_per_Gallon"]}</li>
-//           <li>Cylinders: {car["Cylinders"]}</li>
-//           <li>Displacement: {car["Displacement"]}</li>
-//           <li>Horsepower: {car["Horsepower"]}</li>
-//         </ul>
-//     </CardContent>
-//     <Divider />
-//     <CardActions style={{ color: 'mediumblue' }}>
-//       <Link to={`/car/${car.id}`}>See more Details</Link>
-//       {/* <a>See more Details</a> */}
-//     </CardActions>
-//   </Card>
-// ))}
-
-// "id": 1,
-// "Name":"chevrolet chevelle malibu",
-// "Miles_per_Gallon":18,
-// "Cylinders":8,
-// "Displacement":307,
-// "Horsepower":130,
-// "Weight_in_lbs":3504,
-// "Acceleration":12,
-// "Year":"1970-01-01",
-// "Origin":"USA"
