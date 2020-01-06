@@ -10,6 +10,7 @@ function App() {
 	return (
 		<BrowserRouter>
 			<Navigation />
+			<Router />
 		</BrowserRouter>
 	);
 }

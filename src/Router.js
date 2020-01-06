@@ -9,21 +9,22 @@ Remember to export the component at the end
 */
 // Write component imports here //
 
-import React from 'react'
-import { Switch, Route } from 'react-router'
-import Home from './components/Home'
-import About from './components/About'
+import React from "react";
+import { Switch, Route, Redirect } from "react-router";
+import Home from "./components/Home";
+import About from "./components/About";
+import Car from "./components/Car";
 
-    const Router = () => {
-        return (
-            <Switch>
-                <Route exact path="/" component={Home} />
-                <Route path="/About" component={About} />
-            </Switch>
-        )
-    }
+const Router = () => {
+	return (
+		<Switch>
+			<Route exact path="/" component={Home} />
+			<Route path="/About" component={About} />
+			<Route path="/car/:id" component={Car} />
+		</Switch>
+	);
+};
 
-export default Router
-
+export default Router;
 
 // Start Router function here //
