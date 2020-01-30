@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Container, Divider, Switch } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 
 class About extends Component {
     state = {

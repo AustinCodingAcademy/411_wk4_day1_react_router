@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card, CardContent, CardActions, Divider } from '@material-ui/core'
 import cars from '../cars.json'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
     console.log('CARS', cars)
@@ -20,7 +21,9 @@ const Home = () => {
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>
                         {/* Change a tag to Link */}
-                        <a>See more Details</a>
+                        <Link to="/">Home Page</Link>
+                        <Link to="/about">About Page</Link>
+                        <Link to="/car/${car.id}">See More Details</Link>
                     </CardActions>
                 </Card>
             ))}
