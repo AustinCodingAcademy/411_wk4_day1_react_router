@@ -6,9 +6,7 @@ import { Paper } from "@material-ui/core";
 
 const Car = props => {
 
-  let id = props.match.params.id - 1;
-  let car = cars[id]
-    console.log(car)
+  var car = cars.find(car =>car.id==props.match.params.id)
 
     return (
       <Container fixed maxWidth="xs">
