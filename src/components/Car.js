@@ -1,31 +1,32 @@
 import React from 'react'
 import cars from '../cars.json'
-// import material ui components here //
-// Container, Paper, Chip //
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
-import Paper from '@material-ui/core/Paper';
+import { Chip } from "@material-ui/core/";
+import { Container } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
 
-export default function Car (props) {
+const Car = props => {
 
-    const id = props.match.params.id
+  let id = props.match.params.id - 1;
+  let car = cars[id]
+    console.log(car)
 
-    cars[id - 1]
-    console.log(cars)
-
-  return (
-
-    cars.find((car => car == id)(
-        <p key={index}>{car}</p>
-       ))
-
-
-    <React.Fragment>
-      <CssBaseline />
-      <Container maxWidth="sm">
-        <Typography component="div" style={{ backgroundColor: 'white', height: '50vh' }} />
+    return (
+      <Container fixed maxWidth="xs">
+        <Paper elvation={3}>
+          <h1>{car.Name}</h1>
+          <Chip label={`id: ${car.id}`} />
+          <Chip label={`Name: ${car.Name}`} />
+          <Chip label={`MPG: ${car.Miles_per_Gallon}`} />
+          <Chip label={`Cylinders: ${car.Cylinders}`} />
+          <Chip label={`Displacement: ${car.Displacement}`} />
+          <Chip label={`Horsepower: ${car.Horsepower}`} />
+          <Chip label={`Weight (lbs.): ${car.Weight_in_lbs}`} />
+          <Chip label={`Acceleration: ${car.Acceleration}`} />
+          <Chip label={`Year: ${car.Year}`} />
+          <Chip label={`Origin: ${car.Name}`} />
+        </Paper>
       </Container>
-    </React.Fragment> 
-  );
+    );
 }
+
+export default Car
