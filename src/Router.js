@@ -8,31 +8,27 @@ to the About component.
 Remember to export the component at the end
 */
 
-import React from 'react'
-import { Switch, Route } from 'react-router'
+import React from "react";
+import { Switch, Route } from "react-router";
 // Write component imports here //
-import Home from "./components/Home"
-import About from "./components/About"
-import Car from "./components/Car"
-
+import Home from "./components/Home";
+import About from "./components/About";
+import Car from "./components/Car";
 
 // Start Router function here //
 
 export function Router() {
-    return (
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/car/:id" component={Car} />
-          </Switch>
-    );
-  }
+  return (
+    <Switch>
+      <Route exact path="/">
+        <Home />
+      </Route>
+      <Route path="/about">
+        <About />
+      </Route>
+      <Route path="/car/:id" component={Car} />
+    </Switch>
+  );
+}
 
-  export default Router;
-
-
-
+export default Router;
