@@ -5,13 +5,8 @@ import cars from '../cars.json'
 
 //why is line 9 nesssicary?
 const Car = (props) => {
-    const x = props.match.params.id;
-    let car;
-    for (let i=0; i<cars.length; i++) {
-        if (cars[i].id === parseInt(x)) {
-            car = cars[i]
-        }
-    }
+    const x = parseInt(props.match.params.id);
+    let car = cars.find(car => car.id === (x+1));
     return (
         <h1>specific car: {car.Name}</h1>
         
