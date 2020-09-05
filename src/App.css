@@ -38,3 +38,23 @@ ul {
 .car-paper {
   padding: 50px;
 }
+
+.link {
+  color: white;
+}
+
+.paper {
+  text-align: center;
+  margin-top: 8%;
+  margin-left: 24%;
+  margin-right: 24%;
+}
+
+.carDetails {
+  list-style-type: none;
+}
+
+.carName {
+  font-weight: bold;
+  font-size: 18px;
+}
