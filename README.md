@@ -1,3 +1,5 @@
+[![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/AustinCodingAcademy/411_wk4_day1_react_router)
+
 ## Setup
 
 Clone this repo and run `npm i` and then `npm start`

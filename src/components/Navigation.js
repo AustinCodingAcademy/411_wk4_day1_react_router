@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React, { Component, Fragment } from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@material-ui/core'
 import MenuIcon from '@material-ui/icons/Menu'
