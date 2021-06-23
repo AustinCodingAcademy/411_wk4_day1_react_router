@@ -40,7 +40,7 @@ class About extends Component {
                         receive any money from them to do so. Although, there's 
                         an argument that maybe we should since we are a top-notch
                         coding bootcamp and anyone would want to be associated with
-                        us :)
+                        us :
                     </p>
                     <Divider />
                     <p>
