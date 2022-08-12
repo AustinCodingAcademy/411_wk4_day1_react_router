@@ -14,6 +14,9 @@ Clone this repo and run `npm i` and then `npm start`
 
 * If you were successful you should see a homepage with a lot of different car details on it. You should also be able to add "/about" to the end of the url to see the about page. Typing this paths in the browser will soon get tiring so let's add them to the Navigation component. There are two commented areas for you to add links. Create one Link to the Home page and one to the About page. If you forget how to do that, reference the documentation [here](https://reactrouter.com/docs/en/v6/components/link).
 
+
+- PAREI AQUI !!!!!!!!! ---------------------------------------------------------------------------
+
 * Next we want to fill out the `Car` component in `src/Car.js` but first we will need to be able to see it and `Link` to it. Inside of `Router.js` import the "Car" component and create a route for it. The path should be able to accept an id for the specific car as well. For example: "/car/:id".
 
 * Once that is complete, go to the `Home` component and look for the comment regarding the "a tag". Change that to a `Link` component and have the "to" property be: `/car/${car.id}`. You can leave the text, "See More Details" the same. Notice how you are routed to the "Car" component when you click on the Link. Try clicking on different cars, do you notice that the id is different each time?
