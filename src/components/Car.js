@@ -9,8 +9,6 @@ import { Container, Paper, Chip } from "@mui/material";
 const Car = (props) => {
     const carId = useParams().id
     const theCar = cars.find((car) => car.id === Number(carId))
-    console.log(theCar)
-    console.log("carId is", carId, "type is", typeof carId)
 
 
     return (
