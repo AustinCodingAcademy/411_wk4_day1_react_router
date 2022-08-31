@@ -1,9 +1,12 @@
 import React from 'react'
 import { AppBar, Toolbar, IconButton, Typography } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
-// Import { Link } here //
+import { Link, useNavigate } from 'react-router-dom'
+import cookie from "cookie"
+
 
 const Navigation = () => {
+    const navigate = useNavigate()
     return (
         <AppBar position="relative">
             <Toolbar>
@@ -15,10 +18,20 @@ const Navigation = () => {
                 </Typography>
                 <ul className="nav-list">
                     <li className="nav-list-item">
-                        {/* Add Link here */}
-                    </li>
+                        <Link to="/About">About</Link>                    </li>
                     <li className="nav-list-item">
-                        {/* Add Link here */}
+                        <Link to="/">Home</Link>
+                    </li>
+                    <li
+                        className="nav-list-item"
+                        onClick={() => {
+                            document.cookie = cookie.serialize("loggedIn", null, {
+                                maxAge: 0,
+                            });
+                            navigate("/login");
+                        }}
+                    >
+                        Logout
                     </li>
                 </ul>
             </Toolbar>
